@@ -1,3 +1,5 @@
+package businessRules;
+
 import javax.swing.*;
 
 public class JOptionPaneNames {

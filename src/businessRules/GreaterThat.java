@@ -1,3 +1,5 @@
+package businessRules;
+
 public class GreaterThat {
 
     public static void main(String[] args) {

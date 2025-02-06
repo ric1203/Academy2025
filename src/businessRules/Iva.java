@@ -1,11 +1,17 @@
+package businessRules;
+
 import java.util.Scanner;
 
 public class Iva {
 
-    public static final double iva = 0.21D;
+    public static final double iva = 21D;
 
     public static Double increase(double price){
-        return price + ((iva / 100)*iva);
+        return increaseIvaVariable(price,iva);
+    }
+
+    public static Double increaseIvaVariable(double price, double newIva){
+        return price + ((newIva / 100) * price);
     }
 
     public static void main(String[] args) {

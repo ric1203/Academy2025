@@ -1,3 +1,5 @@
+package businessRules;
+
 import java.util.Scanner;
 
 public class CalculatorCircle {
