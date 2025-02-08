@@ -52,6 +52,19 @@ public class InvoiceDetail {
         return sb.toString();
     }
 
+    public static Product insertProduct (Scanner sc){
+        String name;
+        double price;
+        Product product = new Product();
+        System.out.println("Ingrese el nombre del producto");
+        name = sc.next();
+        product.setName(name);
+        System.out.println("Ingrese el precio del producto");
+        price = sc.nextDouble();
+        product.setPrice(price);
+        return product;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese el titulo de la factura");
@@ -60,17 +73,8 @@ public class InvoiceDetail {
         String description = sc.nextLine();
         int choice= 0;
         List<Product> products = new ArrayList<>();
-        String name;
-        double price;
         do{
-            Product product = new Product();
-            System.out.println("Ingrese el nombre del producto");
-            name = sc.next();
-            product.setName(name);
-            System.out.println("Ingrese el precio del producto");
-            price = sc.nextDouble();
-            product.setPrice(price);
-            products.add(product);
+            products.add(insertProduct(sc));
             System.out.println("¿Quiere ingresar un producto? //escriba 1 si o 2 no");
             choice = sc.nextInt();
         }while (choice == 1);
